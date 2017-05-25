@@ -15,4 +15,7 @@ class Property extends Model {
 		return $this->hasMany('App\PropertyHistory', 'property_id')->with("agent");
 	}
 
+	public function domain() {
+		return $this->belongsTo('App\Domain', 'domain_id');
+	}
 }
